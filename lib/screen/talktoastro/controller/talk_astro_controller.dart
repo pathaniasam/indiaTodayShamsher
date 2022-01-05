@@ -76,8 +76,6 @@ class AstroController extends GetxController {
           duplicateItems.addAll(data);
           isLoading = false;
           update();
-        }).catchError((onError) {
-          print("error");
         });
       } else {
         Get.snackbar("Connection", "Please check internet connection");

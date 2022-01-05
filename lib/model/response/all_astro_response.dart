@@ -194,23 +194,19 @@ class Skills {
 }
 
 class Images {
-  Small? small;
   Large? large;
   Large? medium;
 
-  Images({this.small, this.large, this.medium});
+  Images({ this.large, this.medium});
 
   Images.fromJson(Map<String, dynamic> json) {
-    small = json['small'] != null ? new Small.fromJson(json['small']) : null;
     large = json['large'] != null ? new Large.fromJson(json['large']) : null;
     medium = json['medium'] != null ? new Large.fromJson(json['medium']) : null;
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.small != null) {
-      data['small'] = this.small!.toJson();
-    }
+
     if (this.large != null) {
       data['large'] = this.large!.toJson();
     }
@@ -221,24 +217,6 @@ class Images {
   }
 }
 
-class Small {
-  Null imageUrl;
-  Null id;
-
-  Small({this.imageUrl, this.id});
-
-  Small.fromJson(Map<String, dynamic> json) {
-    imageUrl = json['imageUrl'];
-    id = json['id'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['imageUrl'] = this.imageUrl;
-    data['id'] = this.id;
-    return data;
-  }
-}
 
 class Large {
   String? imageUrl;

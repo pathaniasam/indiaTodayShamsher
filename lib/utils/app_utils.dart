@@ -88,7 +88,7 @@ class AppUtils {
         context: context,
         initialDate: new DateTime(1980),
         firstDate: new DateTime(1900),
-        lastDate: new DateTime(2022),
+        lastDate: new DateTime(2023),
         builder: (BuildContext context, Widget? child) {
           return Theme(
             data: ThemeData.dark().copyWith(

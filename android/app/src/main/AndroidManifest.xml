@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.india.indiatodayshamsher">
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
         android:label="indiatodayshamsher"
+       android:usesCleartextTraffic="true"
         android:icon="@mipmap/logo">
         <activity
             android:name=".MainActivity"

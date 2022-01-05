@@ -35,8 +35,6 @@ class DashboardController extends GetxController{
           PlacesResponse response=PlacesResponse.fromJson(jsonDecode(values.data));
           data.addAll(response.data!);
           update();
-        }).catchError((onError){
-
         });
       }else{
         Get.snackbar("Connection", "Please check internet connection");
@@ -60,8 +58,6 @@ class DashboardController extends GetxController{
             PanchangResponse response =PanchangResponse.fromJson(jsonDecode(value!.data!));
             panchangdata=response.data;
             update();
-          }).catchError((onError){
-
           });
       }else{
         Get.snackbar("Connection", "Please check internet connection");
